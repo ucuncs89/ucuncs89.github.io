@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/src/PHPTelebot.php';
+require_once __DIR__.'PHPTelebot.php';
 
 $bot = new PHPTelebot('1086380132:AAFkV2Bbjp1lOqoQSRoMawMwDdHGNKnTqZU', '@InfoMonitorBot');
 

@@ -73,7 +73,7 @@
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about bg-dark text-white">
       <div class="container">
 
         <div class="section-title">
@@ -82,7 +82,7 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/profile.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Bio</h3>
@@ -163,7 +163,7 @@
     </section>  End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills section-bg bg-dark text-white">
       <div class="container">
 
         <div class="section-title">
@@ -236,7 +236,7 @@
     </section><!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume bg-dark text-white">
       <div class="container">
 
         <div class="section-title">
@@ -441,7 +441,7 @@
     <!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact bg-dark text-white">
       <div class="container">
 
         <div class="section-title">
@@ -471,7 +471,6 @@
                 <p>+62 898 2551 699</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.0308185773642!2d107.62872981477265!3d-6.8869119950235085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7a9d24f9689%3A0x795937fcd6be9167!2sJl.%20Sekemirung%20Kidul%2C%20Cigadung%2C%20Kec.%20Cibeunying%20Kaler%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040191!5e0!3m2!1sen!2sid!4v1624566034776!5m2!1sen!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
           </div>
@@ -483,12 +482,13 @@
               	<p>Send Message to My Whatsapp</p>
                 <div class="form-group">
                   <label for="name">Your Name</label>
-                  <input type="text" class="form-control" id="txt_name" name="txt_name" required>
+                  <input type="text" class="form-control" id="txt_name" name="txt_name" required
+                  style="background:#212529; color: #fff;">
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" rows="10" id="txt_message" name="txt_message" required></textarea>
+                <textarea class="form-control" rows="10" id="txt_message" name="txt_message" required style="background:#212529; color: #fff;"></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -518,11 +518,17 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <script type="text/javascript">
-	function sendx(){  
-var txt_name=document.getElementById("txt_name").value;;
-var txt_message=document.getElementById("txt_message").value;
-var xpesan = "Nama : " + txt_name + " Pesan : "+ txt_message ;
-window.location.href = "https://api.whatsapp.com/send?phone=628982551699&text="+xpesan;  
+	function sendx(){
+    var txt_name=document.getElementById("txt_name").value;;
+    var txt_message=document.getElementById("txt_message").value;
+
+  if (txt_name=="" || txt_message=="") {
+    alert("Harap Diisi dengan benar");
+} else {
+  var xpesan = "Nama : " + txt_name + " Pesan : "+ txt_message ;
+window.location.href = "https://api.whatsapp.com/send?phone=628982551699&text="+xpesan;
+}  
+  
 } 
 </script>
   <!-- Vendor JS Files -->
